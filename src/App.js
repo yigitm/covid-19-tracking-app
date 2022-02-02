@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Container } from 'react-bootstrap';
-import { fetchData, getData } from './redux/countries/countries';
+import { fetchData } from './redux/countries/countries';
 import './App.css';
 
 const App = () => {
