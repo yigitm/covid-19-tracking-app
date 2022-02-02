@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Container } from 'react-bootstrap';
 import { fetchData } from './redux/countries/countries';
 import './App.css';
+import Countries from './components/Countries';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -11,9 +12,11 @@ const App = () => {
     dispatch(fetchData);
   }, []);
 
-  const countries = useSelector((state) => state.countryReducers);
-
-  return <Container></Container>;
+  return (
+    <Container fluid className="mt-5">
+      <Countries />
+    </Container>
+  );
 };
 
 export default App;
