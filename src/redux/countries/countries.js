@@ -21,8 +21,8 @@ export const fetchData = async (dispatch) => {
     let country = {
       name: item[0],
       id: item[1].id,
-      newCase: item[1].today_confirmed,
-      total: item[1].today_new_confirmed,
+      newCase: item[1].today_new_confirmed,
+      total: item[1].today_confirmed,
       regions: {
         region: item[1].regions,
       },
