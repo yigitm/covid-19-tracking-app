@@ -1,34 +1,26 @@
-const GET_DATA = 'covid-19-tracking-app/countries/GET_DATA';
+const GET_TOTAL = 'covid-19-tracking-app/header/GET_TOTAL';
 const baseURL = 'https://api.covid19tracking.narrativa.com/api?date_from=';
 
 const initialState = [];
 
-export const getData = (state) => ({
-  type: GET_DATA,
+export const getTotal = (state) => ({
+  type: GET_TOTAL,
   payload: state,
 });
 
-export const fetchData = async (dispatch) => {
+export const fetchHeaderData = async (dispatch) => {
   const response = await fetch(
     baseURL + `${dateHelper()}&date_to=${dateHelper()}`,
   );
   const data = await response.json();
-  const countryData = Object.entries(data.dates[dateHelper()].countries);
+  const metaData = Object.entries(data.total);
   const stateData = [];
 
-  countryData.map((item) => {
-    let country = {
-      name: item[0],
-      id: item[1].id,
-      newCase: item[1].today_new_confirmed,
-      total: item[1].today_confirmed,
-      regions: {
-        region: item[1].regions,
-      },
-    };
-    stateData.push(country);
-  });
-  dispatch(getData(stateData));
+  const totalCase = {
+    total: metaData[6][1],
+  };
+  stateData.push(totalCase);
+  dispatch(getTotal(stateData));
 };
 
 export const dateHelper = () => {
@@ -40,13 +32,13 @@ export const dateHelper = () => {
   return dataDate;
 };
 
-const countryReducers = (state = initialState, action) => {
+const headerReducers = (state = initialState, action) => {
   switch (action.type) {
-    case GET_DATA:
+    case GET_TOTAL:
       return action.payload;
     default:
       return state;
   }
 };
 
-export default countryReducers;
+export default headerReducers;
