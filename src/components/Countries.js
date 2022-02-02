@@ -1,8 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Card, Col } from 'react-bootstrap';
-import stats from '../images/stats.png';
-import arrow from '../images/up-arrow.png';
 import Loading from './Loading';
 
 const Countries = () => {
