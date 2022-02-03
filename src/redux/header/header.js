@@ -25,7 +25,8 @@ export const fetchHeaderData = async (dispatch) => {
 
 export const dateHelper = () => {
   let date = new Date();
-  let day = date.getDate() < 10 ? '0' + date.getDate() : date.getDate();
+  let day =
+    date.getDate() < 10 ? '0' + (date.getDate() - 1) : date.getDate() - 1;
   let month = date.getMonth() < 10 ? '0' + date.getMonth() : date.getMonth();
   let year = date.getFullYear();
   let dataDate = [year.toString(), day.toString(), month.toString()].join('-');

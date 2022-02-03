@@ -1,11 +1,12 @@
+import { Routes, Route } from 'react-router-dom';
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { Container, Row, Col } from 'react-bootstrap';
 import { fetchData } from './redux/countries/countries';
 import { fetchHeaderData } from './redux/header/header';
+import Home from './components/Home/Home';
+import Regions from './components/Detail/Regions';
+
 import './App.css';
-import Countries from './components/Countries';
-import Header from './components/Header';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -16,12 +17,10 @@ const App = () => {
   }, []);
 
   return (
-    <Container fluid className="mt-5">
-      <Header />
-      <Row>
-        <Countries />
-      </Row>
-    </Container>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/:id" element={<Regions />} />
+    </Routes>
   );
 };
 

@@ -1,7 +1,6 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { Card, Col } from 'react-bootstrap';
-import Loading from './Loading';
 
 const Countries = () => {
   const countries = useSelector((state) => state.countryReducers);
