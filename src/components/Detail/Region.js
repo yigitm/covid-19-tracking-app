@@ -1,11 +1,15 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { Card, Col } from 'react-bootstrap';
+import { getRegion } from '../../redux/countries/countries';
 
 const Regions = () => {
   const countries = useSelector((state) => state.countryReducers);
+  const dispatch = useDispatch();
 
-  return countries.map((region) => (
+  //return console.log(dispatch(getRegion));
+
+  /*return countries.map((region) => (
     <Col key={region.id} className="w-100" className="col-6 col-md-2 col-lg-3">
       <Card.Body>
         <div className="d-flex justify-content-between">
@@ -20,7 +24,7 @@ const Regions = () => {
         </Card.Text>
       </Card.Body>
     </Col>
-  ));
+  ));*/
 };
 
 export default Regions;

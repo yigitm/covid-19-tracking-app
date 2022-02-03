@@ -1,10 +1,16 @@
 const GET_DATA = 'covid-19-tracking-app/countries/GET_DATA';
+const FILTER_REGION = 'covid-19-tracking-app/countries/FILTER_REGION';
 const baseURL = 'https://api.covid19tracking.narrativa.com/api?date_from=';
 
 const initialState = [];
 
 export const getData = (state) => ({
   type: GET_DATA,
+  payload: state,
+});
+
+export const getRegion = (state) => ({
+  type: FILTER_REGION,
   payload: state,
 });
 
@@ -45,6 +51,8 @@ const countryReducers = (state = initialState, action) => {
   switch (action.type) {
     case GET_DATA:
       return action.payload;
+    case FILTER_REGION:
+      return state.filter((s) => s.regions.length > 0);
     default:
       return state;
   }
