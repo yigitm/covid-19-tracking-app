@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { Card, Col } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const Countries = () => {
   const countries = useSelector((state) => state.countryReducers);
@@ -10,7 +11,9 @@ const Countries = () => {
       <Card.Body>
         <div className="d-flex justify-content-between">
           <i className="fas fa-chart-pie fa-3x text-left" />
-          <i className="far fa-arrow-alt-circle-right fa-2x" />
+          <Link to={country.id}>
+            <i className="far fa-arrow-alt-circle-right fa-2x" />
+          </Link>
         </div>
         <Card.Title className="text-end">{country.name}</Card.Title>
         <Card.Text className="text-end">Total Cases: {country.total}</Card.Text>

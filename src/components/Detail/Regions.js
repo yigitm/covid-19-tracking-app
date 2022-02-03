@@ -1,6 +1,5 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import { identifier } from '@babel/types';
 
 const Regions = () => {
   const { id } = useParams();
