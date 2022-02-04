@@ -9,6 +9,28 @@ Object {
         class="col-12 bg-red col"
       >
         <div
+          class="w-100 h-100 text-light loading bg-red"
+        >
+          <div
+            class="d-flex justify-content-center align-items-center"
+          >
+            <div
+              class="spinner-grow spinner-grow-md"
+            />
+            <div
+              class="spinner-grow spinner-grow-md"
+            />
+            <div
+              class="spinner-grow spinner-grow-md"
+            />
+            <h1
+              class=""
+            >
+              Loading...
+            </h1>
+          </div>
+        </div>
+        <div
           class="d-flex justify-content-between card-body"
         >
           <i
@@ -31,6 +53,28 @@ Object {
     <div
       class="col-12 bg-red col"
     >
+      <div
+        class="w-100 h-100 text-light loading bg-red"
+      >
+        <div
+          class="d-flex justify-content-center align-items-center"
+        >
+          <div
+            class="spinner-grow spinner-grow-md"
+          />
+          <div
+            class="spinner-grow spinner-grow-md"
+          />
+          <div
+            class="spinner-grow spinner-grow-md"
+          />
+          <h1
+            class=""
+          >
+            Loading...
+          </h1>
+        </div>
+      </div>
       <div
         class="d-flex justify-content-between card-body"
       >

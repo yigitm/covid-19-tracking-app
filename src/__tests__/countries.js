@@ -5,17 +5,29 @@ import { getData } from '../redux/countries/countries';
 
 const middlewares = [thunk, logger];
 const mockStore = configureStore(middlewares);
-
-it('should dispatch action', () => {
+//const getData = () => ({ type: 'GET_DATA' });
+it('test: GET_DATA action return correct payload', () => {
   // Initialize mockstore with empty state
   const initialState = [];
   const store = mockStore(initialState);
 
   // Dispatch the action
-  store.dispatch(getData());
+  const fetchedData = {
+    name: 'Angola',
+    id: 'angola',
+    newCase: 98267,
+    total: 98267,
+    regions: {
+      region: { region: [] },
+    },
+  };
 
-  // Test if your store dispatched the expected actions
+  const action = store.dispatch(getData([fetchedData]));
   const actions = store.getActions();
-  const expectedPayload = { type: 'GET_DATA' };
-  expect(actions).toEqual([expectedPayload]);
+  expect(actions[0]).toEqual(action);
+
+  /* Test if your store dispatched the expected actions
+  const actions = store.getActions();
+  const expectedPayload = { type: 'GET_DATA', fetchedData };
+  expect(actions).toEqual([expectedPayload]);*/
 });

@@ -1,4 +1,5 @@
 import React from 'react';
+import '@testing-library/jest-dom';
 import { BrowserRouter } from 'react-router-dom';
 import { render } from '@testing-library/react';
 import Noregion from '../components/Detail/Noregion';
