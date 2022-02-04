@@ -1,4 +1,4 @@
-import configureStore from 'redux-mock-store'; //ES6 modules
+import configureStore from 'redux-mock-store'; // ES6 modules
 import thunk from 'redux-thunk';
 import logger from 'redux-logger';
 import { getTotal } from '../redux/header/header';
@@ -33,7 +33,7 @@ describe('GET_TOTAL reducer: PASS & FAIL cases with mock store', () => {
     };
 
     // Dispatch the action
-    const action = store.dispatch(getTotal([fetchedData]));
+    store.dispatch(getTotal([fetchedData]));
     const actions = store.getActions();
     expect(actions[0]).not.toEqual(fakeData);
   });

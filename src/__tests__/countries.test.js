@@ -1,8 +1,8 @@
-import configureStore from 'redux-mock-store'; //ES6 modules
+import configureStore from 'redux-mock-store'; // ES6 modules
 import thunk from 'redux-thunk';
 import logger from 'redux-logger';
-import { getData } from '../redux/countries/countries';
 import { describe } from 'jest-circus';
+import { getData } from '../redux/countries/countries';
 
 const middlewares = [thunk, logger];
 const mockStore = configureStore(middlewares);
@@ -60,7 +60,7 @@ describe('GET_DATA reducer: PASS & FAIL cases with mock store', () => {
     };
 
     // Dispatch the action
-    const action = store.dispatch(getData([fetchedData]));
+    store.dispatch(getData([fetchedData]));
     const actions = store.getActions();
     expect(actions[0]).not.toEqual(fakeData);
   });
