@@ -1,5 +1,5 @@
-import Loading from './Loading';
 import { Container, Row } from 'react-bootstrap';
+import Loading from './Loading';
 import Nav from './Nav';
 import Header from './Header';
 import Countries from './Countries';
