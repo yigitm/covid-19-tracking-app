@@ -1,13 +1,12 @@
 import React from 'react';
 import { Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import Home from './Home';
 
 const Nav = () => (
   <Navbar className="p-0">
     <Navbar.Brand>
       <Link to="/">
-        <i className="fas fa-angle-left"></i> Covid Stats
+        <i className="fas fa-angle-left"></i>
       </Link>
     </Navbar.Brand>
     <Navbar.Toggle />
