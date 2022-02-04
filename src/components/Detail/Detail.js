@@ -28,6 +28,7 @@ const Detail = () => {
 
   const getRegions = () => {
     listRegion.map((item) => (listDisplay = item[1].region));
+    console.log(listDisplay);
   };
 
   checkRegion();
