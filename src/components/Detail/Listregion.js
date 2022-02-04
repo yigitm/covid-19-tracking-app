@@ -1,13 +1,6 @@
-import React, { useEffect } from 'react';
 import { Card } from 'react-bootstrap';
 
 const Listregion = (region, index, id) => {
-  const scrolTop = () => {
-    window.scrollTo(0, 0);
-  };
-
-  scrollTop();
-
   return (
     /* eslint-disable react/destructuring-assignment */
     <Card key={region.id} id={id} className="p-0 gap-0 border-0">

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import Listregion from './Listregion';
@@ -32,6 +32,10 @@ const Detail = () => {
   checkRegion();
   filterRegions();
   getRegions();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return listDisplay.length > 0 ? (
     listDisplay.map((region, index) => Listregion(region, index, id))
