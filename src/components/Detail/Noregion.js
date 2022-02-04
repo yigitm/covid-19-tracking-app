@@ -3,12 +3,13 @@ import { Card, Col } from 'react-bootstrap';
 
 const noRegion = () => {
   return (
-    <Col className="w-100" className="col-6 col-md-2 col-lg-3">
-      <Card.Body>
-        <div className="d-flex justify-content-between">
-          <i className="fas fa-chart-pie fa-3x text-left" />
-        </div>
-        <Card.Title className="text-end">No Regions</Card.Title>
+    <Col className="col-12 bg-red">
+      <Card.Body className="d-flex justify-content-between">
+        <i className="fas fa-chart-pie text-left icon-header" />
+
+        <Card.Title className="text-center font-big">
+          <span className="font-region">No Regions</span>
+        </Card.Title>
       </Card.Body>
     </Col>
   );

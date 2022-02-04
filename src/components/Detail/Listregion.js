@@ -3,7 +3,11 @@ import { Card, Col } from 'react-bootstrap';
 
 const Listregion = (region) => {
   return (
-    <Col key={region.id} className="w-100" className="col-6 col-md-2 col-lg-3">
+    <Col
+      key={region.id}
+      className="w-100"
+      className="col-6 col-md-2 col-lg-3 bg-red"
+    >
       <Card.Body>
         <div className="d-flex justify-content-between">
           <i className="fas fa-chart-pie fa-3x text-left" />

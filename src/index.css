@@ -15,6 +15,10 @@
   font-size: 70%;
 }
 
+.font-region {
+  font-size: 150%;
+}
+
 .icon,
 .icon-nav {
   font-size: 200%;
@@ -52,5 +56,9 @@
 
   .icon-header {
     font-size: 950%;
+  }
+
+  .font-region {
+    font-size: 450%;
   }
 }
