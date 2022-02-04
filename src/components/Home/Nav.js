@@ -3,16 +3,17 @@ import { Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const Nav = () => (
-  <Navbar className="p-0">
+  <Navbar className="m-0 p-0 bg-red-bold">
     <Navbar.Brand>
       <Link to="/">
-        <i className="fas fa-angle-left"></i>
+        <i className="fas fa-angle-left icon text-light" />
       </Link>
     </Navbar.Brand>
     <Navbar.Toggle />
     <Navbar.Collapse className="justify-content-end">
       <Navbar.Text>
-        <i className="fas fa-microphone"></i> <i className="fas fa-cog"></i>
+        <i className="fas fa-microphone icon text-light mx-5" />
+        <i className="fas fa-cog icon text-light" />
       </Navbar.Text>
     </Navbar.Collapse>
   </Navbar>

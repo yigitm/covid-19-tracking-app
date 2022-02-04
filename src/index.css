@@ -6,11 +6,34 @@
   background-color: #d35192;
 }
 
-.font-250 {
-  font-size: 250%;
+.font-big {
+  font-size: 70%;
   font-weight: bolder;
 }
 
-.font-200 {
+.font-small {
+  font-size: 70%;
+}
+
+.icon {
   font-size: 200%;
+}
+
+.font-header {
+  font-size: 150%;
+}
+
+.icon-header {
+  font-size: 550%;
+}
+
+@media (min-width: 768px) {
+  .font-big {
+    font-size: 250%;
+    font-weight: bolder;
+  }
+
+  .font-small {
+    font-size: 200%;
+  }
 }

@@ -8,16 +8,16 @@ const Header = () => {
   return (
     <Row className="bg-red">
       <Col className="col-5 p-4 mx-auto">
-        <i class="fas fa-globe-americas fa-10x text-light m-5"></i>
+        <i className="fas fa-globe-americas icon-header text-light m-5"></i>
       </Col>
       <Col className="col-5 p-4 ">
         <p className="text-light mt-5">
-          <span className="font-250 text-left">GLOBAL</span>
+          <span className="font-header text-left">GLOBAL</span>
           <br />
-          <span className="font-200"> {totalCase} cases</span>
+          <span className="font-header"> {totalCase} cases</span>
         </p>
       </Col>
-      <Col className="col-12 p-2 text-left font-250 text-light text-break bg-red-bold">
+      <Col className="col-12 p-2 text-left font-big text-light text-break bg-red-bold">
         Covid-19 Stats
       </Col>
     </Row>

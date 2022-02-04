@@ -6,7 +6,7 @@ import { Container, Row } from 'react-bootstrap';
 
 const Home = () => {
   return (
-    <Container fluid>
+    <Container fluid className="bg-red-bold">
       <Nav />
       <Header />
       <Row>
