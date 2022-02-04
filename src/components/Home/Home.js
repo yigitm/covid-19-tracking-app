@@ -1,3 +1,4 @@
+import Loading from './Loading';
 import { Container, Row } from 'react-bootstrap';
 import Nav from './Nav';
 import Header from './Header';
@@ -5,6 +6,7 @@ import Countries from './Countries';
 
 const Home = () => (
   <Container fluid className="bg-red-bold">
+    <Loading />
     <Nav />
     <Header />
     <Row>
