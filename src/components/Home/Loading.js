@@ -12,7 +12,7 @@ const Loading = () => {
 
   return (
     visible && (
-      <div className="w-100 h-100 m-auto loading bg-red">
+      <div className="w-100 h-100 text-light loading bg-red">
         <div className="d-flex justify-content-center align-items-center">
           <Spinner animation="grow" size="md" />
           <Spinner animation="grow" size="md" />
