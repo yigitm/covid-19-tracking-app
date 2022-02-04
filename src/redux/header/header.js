@@ -1,5 +1,5 @@
 const GET_TOTAL = 'covid-19-tracking-app/header/GET_TOTAL';
-const baseURL = 'https://api.covid19tracking.narrativa.com/api?date_from=';
+const baseURL = 'https://api.covid19tracking.narrativa.com/api/';
 
 const initialState = [];
 
@@ -9,18 +9,15 @@ export const getTotal = (state) => ({
 });
 
 export const fetchHeaderData = async (dispatch) => {
-  const response = await fetch(
-    baseURL + `${dateHelper()}&date_to=${dateHelper()}`,
-  );
+  const response = await fetch(baseURL + `${dateHelper()}`);
   const data = await response.json();
   const metaData = Object.entries(data.total);
-  const stateData = [];
 
   const totalCase = {
     total: metaData[6][1],
   };
-  stateData.push(totalCase);
-  dispatch(getTotal(stateData));
+  console.log(totalCase);
+  dispatch(getTotal(totalCase));
 };
 
 export const dateHelper = () => {

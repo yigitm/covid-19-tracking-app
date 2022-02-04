@@ -32,6 +32,17 @@ const Detail = () => {
   };
   mapRegions();
 
+  const noRegion = (
+    <Col className="w-100" className="col-6 col-md-2 col-lg-3">
+      <Card.Body>
+        <div className="d-flex justify-content-between">
+          <i className="fas fa-chart-pie fa-3x text-left" />
+        </div>
+        <Card.Title className="text-end">No Regions</Card.Title>
+      </Card.Body>
+    </Col>
+  );
+
   const regions = listDisplay.map((region) => (
     <Col key={region.id} className="w-100" className="col-6 col-md-2 col-lg-3">
       <Card.Body>
@@ -49,18 +60,7 @@ const Detail = () => {
     </Col>
   ));
 
-  const noRegion = (
-    <Col className="w-100" className="col-6 col-md-2 col-lg-3">
-      <Card.Body>
-        <div className="d-flex justify-content-between">
-          <i className="fas fa-chart-pie fa-3x text-left" />
-        </div>
-        <Card.Title className="text-end">No Regions</Card.Title>
-      </Card.Body>
-    </Col>
-  );
-
-  return filterCountry.length > 0 ? regions : noRegion;
+  return listRegion.length > 0 ? regions : noRegion;
 };
 
 export default Detail;
