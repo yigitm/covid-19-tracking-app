@@ -35,7 +35,7 @@ const Detail = () => {
   getRegions();
 
   return listDisplay.length > 0 ? (
-    listDisplay.map((region) => Listregion(region))
+    listDisplay.map((region, index) => Listregion(region, index))
   ) : (
     <Noregion />
   );

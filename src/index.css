@@ -19,6 +19,14 @@
   font-size: 150%;
 }
 
+.font-region-list {
+  font-size: 100%;
+}
+
+.font-region-list-sm {
+  font-size: 80%;
+}
+
 .icon,
 .icon-nav {
   font-size: 200%;
@@ -60,5 +68,13 @@
 
   .font-region {
     font-size: 450%;
+  }
+
+  .font-region-list {
+    font-size: 350%;
+  }
+
+  .font-region-list-sm {
+    font-size: 300%;
   }
 }

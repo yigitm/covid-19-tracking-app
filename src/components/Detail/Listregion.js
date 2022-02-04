@@ -1,26 +1,24 @@
 import React from 'react';
-import { Card, Col } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 
-const Listregion = (region) => {
+const Listregion = (region, index) => {
   return (
-    <Col
-      key={region.id}
-      className="w-100"
-      className="col-6 col-md-2 col-lg-3 bg-red"
-    >
-      <Card.Body>
-        <div className="d-flex justify-content-between">
-          <i className="fas fa-chart-pie fa-3x text-left" />
+    <Card key={region.id} className="p-0 gap-0 border-0">
+      <div className={index % 2 === 0 ? 'bg-red' : 'bg-red-bold'}>
+        <div className="d-flex justify-content-between p-5">
+          <i className="fas fa-chart-pie text-light icon-header" />
+          <div>
+            <p className="text-light font-region-list">{region.name}</p>
+            <p className="text-light font-region-list-sm">
+              Total Cases: {region.today_confirmed}
+            </p>
+            <p className="text-light font-region-list-sm">
+              New Cases: {region.today_new_confirmed}
+            </p>
+          </div>
         </div>
-        <Card.Title className="text-end">{region.name}</Card.Title>
-        <Card.Text className="text-end">
-          Total Cases: {region.today_confirmed}
-        </Card.Text>
-        <Card.Text className="text-end">
-          New Cases: {region.today_new_confirmed}
-        </Card.Text>
-      </Card.Body>
-    </Col>
+      </div>
+    </Card>
   );
 };
 export default Listregion;
