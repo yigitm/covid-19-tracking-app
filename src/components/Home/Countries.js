@@ -13,16 +13,18 @@ const Countries = () => {
         className={(index + 1) % 4 >= 2 ? 'bg-red' : 'bg-red-bold'}
       >
         <div className="d-flex justify-content-between">
-          <i className="fas fa-chart-pie fa-3x text-left text-light" />
+          <i className="fas fa-chart-pie fa-10x text-left text-light" />
           <Link to={country.id}>
-            <i className="far fa-arrow-alt-circle-right fa-2x text-light" />
+            <i className="far fa-arrow-alt-circle-right fa-5x text-light" />
           </Link>
         </div>
-        <Card.Title className="text-end text-light">{country.name}</Card.Title>
-        <Card.Text className="text-end text-light">
+        <Card.Title className="text-end text-light">
+          <p className="font-250">{country.name}</p>
+        </Card.Title>
+        <Card.Text className="text-end text-light font-200">
           Total Cases: {country.total}
         </Card.Text>
-        <Card.Text className="text-end text-light">
+        <Card.Text className="text-end text-light font-200">
           New Cases: {country.newCase}
         </Card.Text>
       </Card.Body>

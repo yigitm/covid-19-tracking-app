@@ -6,6 +6,10 @@
   background-color: #d35192;
 }
 
-.w-custom {
-  height: 100vh;
+.font-250 {
+  font-size: 250%;
+}
+
+.font-200 {
+  font-size: 200%;
 }
