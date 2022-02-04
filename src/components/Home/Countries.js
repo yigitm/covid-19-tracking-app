@@ -1,19 +1,17 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { Card, Col } from 'react-bootstrap';
+import { Card, Col, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const Countries = () => {
   const countries = useSelector((state) => state.countryReducers);
 
   return countries.map((country, index) => (
-    <Col
-      key={country.id}
-      className="w-100"
-      className="col-6 col-md-2 col-lg-3"
-      className={(index + 1) % 4 >= 2 ? 'bg-red' : 'bg-red-bold'}
-    >
-      <Card.Body>
+    <Card className="w-50 gap-0 p-0 border-0">
+      <Card.Body
+        key={country.id}
+        className={(index + 1) % 4 >= 2 ? 'bg-red' : 'bg-red-bold'}
+      >
         <div className="d-flex justify-content-between">
           <i className="fas fa-chart-pie fa-3x text-left text-light" />
           <Link to={country.id}>
@@ -28,7 +26,7 @@ const Countries = () => {
           New Cases: {country.newCase}
         </Card.Text>
       </Card.Body>
-    </Col>
+    </Card>
   ));
 };
 export default Countries;

@@ -5,3 +5,7 @@
 .bg-red {
   background-color: #d35192;
 }
+
+.w-custom {
+  height: 100vh;
+}
