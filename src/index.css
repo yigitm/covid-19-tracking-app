@@ -15,7 +15,8 @@
   font-size: 70%;
 }
 
-.icon {
+.icon,
+.icon-nav {
   font-size: 200%;
 }
 
@@ -35,5 +36,21 @@
 
   .font-small {
     font-size: 200%;
+  }
+
+  .icon {
+    font-size: 650%;
+  }
+
+  .icon-nav {
+    font-size: 250%;
+  }
+
+  .font-header {
+    font-size: 450%;
+  }
+
+  .icon-header {
+    font-size: 950%;
   }
 }
