@@ -20,11 +20,11 @@ Development flow included: performing git-flow practices & using components with
 
 ## Live Demo
 
-[Live Demo Link]()
+[Demo Link](https://relaxed-elion-3dcb57.netlify.app/)
 
 ## Video Link
 
-[Live Demo Link]()
+[Video Link](https://www.loom.com/share/d0780fa75ae54985be389b651d0b7674)
 
 ## Getting Started
 
@@ -99,7 +99,7 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/yigitm/react-group-project/issues).
+Feel free to check the [issues page](https://github.com/yigitm/covid-19-tracking-app/issues).
 
 ## Show your support
 
