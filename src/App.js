@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { fetchData, getRegion } from './redux/countries/countries';
+import { fetchData } from './redux/countries/countries';
 import { fetchHeaderData } from './redux/header/header';
 import Home from './components/Home/Home';
 import Region from './components/Detail/Regions';

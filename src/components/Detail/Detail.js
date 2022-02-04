@@ -1,7 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import { Card, Col } from 'react-bootstrap';
 import Listregion from './Listregion';
 import Noregion from './Noregion';
 
@@ -25,7 +24,7 @@ const Detail = () => {
     filterCountry[0][1].filter((item) => listRegion.push(item.regions));
     listRegion = Object.entries(listRegion);
   };
-
+  /* eslint-disable no-return-assign */
   const getRegions = () => {
     listRegion.map((item) => (listDisplay = item[1].region));
   };
@@ -39,6 +38,7 @@ const Detail = () => {
   ) : (
     <Noregion />
   );
+  /* eslint-disable no-return-assign */
 };
 
 export default Detail;

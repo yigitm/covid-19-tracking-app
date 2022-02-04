@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { Image, Col, Row } from 'react-bootstrap';
+import { Col, Row } from 'react-bootstrap';
 
 const Header = () => {
   const totalCase = useSelector((state) => state.headerReducers.total);
@@ -8,13 +8,18 @@ const Header = () => {
   return (
     <Row className="bg-red">
       <Col className="col-5 p-4 mx-auto">
-        <i className="fas fa-globe-americas icon-header text-light m-5"></i>
+        <i className="fas fa-globe-americas icon-header text-light m-5" />
       </Col>
       <Col className="col-5 p-4 ">
         <p className="text-light mt-5">
           <span className="font-header text-left">GLOBAL</span>
           <br />
-          <span className="font-header"> {totalCase} cases</span>
+          <span className="font-header">
+            {' '}
+            {totalCase}
+            {' '}
+            cases
+          </span>
         </p>
       </Col>
       <Col className="col-12 p-2 text-left font-big text-light text-break bg-red-bold">
