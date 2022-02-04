@@ -1,13 +1,90 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.loading {
+  position: absolute;
+  z-index: 1;
+  left: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.spin-size {
+  font-size: 100%;
+}
+
+.bg-red-bold {
+  background-color: #d63384;
+}
+
+.bg-red {
+  background-color: #d35192;
+}
+
+.font-big {
+  font-size: 70%;
+  font-weight: bolder;
+}
+
+.font-small {
+  font-size: 70%;
+}
+
+.font-region {
+  font-size: 150%;
+}
+
+.font-region-list {
+  font-size: 100%;
+}
+
+.font-region-list-sm {
+  font-size: 80%;
+}
+
+.icon,
+.icon-nav {
+  font-size: 200%;
+}
+
+.font-header {
+  font-size: 150%;
+}
+
+.icon-header {
+  font-size: 550%;
+}
+
+@media (min-width: 768px) {
+  .font-big {
+    font-size: 250%;
+    font-weight: bolder;
+  }
+
+  .font-small {
+    font-size: 200%;
+  }
+
+  .icon {
+    font-size: 650%;
+  }
+
+  .icon-nav {
+    font-size: 250%;
+  }
+
+  .font-header {
+    font-size: 450%;
+  }
+
+  .icon-header {
+    font-size: 950%;
+  }
+
+  .font-region {
+    font-size: 450%;
+  }
+
+  .font-region-list {
+    font-size: 350%;
+  }
+
+  .font-region-list-sm {
+    font-size: 300%;
+  }
 }

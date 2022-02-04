@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Home render Test Home 1`] = `
+<Container
+  className="bg-red-bold"
+  fluid={true}
+>
+  <Loading />
+  <Nav />
+  <Header />
+  <Row>
+    <Countries />
+  </Row>
+</Container>
+`;
