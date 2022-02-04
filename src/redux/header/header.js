@@ -16,7 +16,6 @@ export const fetchHeaderData = async (dispatch) => {
   const totalCase = {
     total: metaData[6][1],
   };
-  console.log(totalCase);
   dispatch(getTotal(totalCase));
 };
 
