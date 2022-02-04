@@ -2,7 +2,6 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { Card, Col } from 'react-bootstrap';
-import Region from './Region';
 
 const Detail = () => {
   const countries = useSelector((state) => state.countryReducers);
@@ -11,17 +10,16 @@ const Detail = () => {
   let listRegion = [];
   let listDisplay = [];
 
-  const check = () => {
+  const checkRegion = () => {
     filterCountry.push(
       countries.filter(
         (item) => item.regions.region.length > 0 && item.id === id,
       ),
     );
     filterCountry = Object.entries(filterCountry);
-    //console.log(filterCountry);
   };
 
-  check();
+  checkRegion();
 
   const filterRegions = () => {
     filterCountry[0][1].filter((item) => listRegion.push(item.regions));
@@ -51,7 +49,18 @@ const Detail = () => {
     </Col>
   ));
 
-  return regions;
+  const noRegion = (
+    <Col className="w-100" className="col-6 col-md-2 col-lg-3">
+      <Card.Body>
+        <div className="d-flex justify-content-between">
+          <i className="fas fa-chart-pie fa-3x text-left" />
+        </div>
+        <Card.Title className="text-end">No Regions</Card.Title>
+      </Card.Body>
+    </Col>
+  );
+
+  return filterCountry.length > 0 ? regions : noRegion;
 };
 
 export default Detail;
