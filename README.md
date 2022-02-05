@@ -6,7 +6,7 @@
 
 Covid-19 Tracking App is a React & Redux application which users can display filtered global covid-19 data as country and date based.
 
-![App_Gif](./src/images/app.gif)
+[![App_Gif](./src/images/app.gif)](https://relaxed-elion-3dcb57.netlify.app/)
 
 Development flow included: performing git-flow practices & using components with routers, life cycle methods, handling events and state management by Redux store, actions, reducers with asynchronous actions in [duck Pattern](https://github.com/erikras/ducks-modular-redux) including unit and component tests.
 
