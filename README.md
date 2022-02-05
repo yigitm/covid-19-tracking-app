@@ -10,6 +10,12 @@ Covid-19 Tracking App is a React & Redux application which users can display fil
 
 Development flow included: performing git-flow practices & using components with routers, life cycle methods, handling events and state management by Redux store, actions, reducers with asynchronous actions in [duck Pattern](https://github.com/erikras/ducks-modular-redux) including unit and component tests.
 
+## Design
+
+Original design is belongs to: [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio).
+
+![App_Gif](./src/images/design.png)
+
 ## Built With
 
 - Javascript
@@ -21,10 +27,6 @@ Development flow included: performing git-flow practices & using components with
 ## Live Demo
 
 [Demo Link](https://relaxed-elion-3dcb57.netlify.app/)
-
-## Video Link
-
-[Video Link](https://www.loom.com/share/d0780fa75ae54985be389b651d0b7674)
 
 ## Getting Started
 
