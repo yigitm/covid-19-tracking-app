@@ -73,7 +73,7 @@ const countryReducers = (state = initialState, action) => {
     case SEARCH_COUNTRY:
       let input = action.payload.toString();
       let searchValues = state.filter((s) => {
-        return s.name.toLowerCase().includes(input);
+        return s.id.includes(input.toLowerCase());
       });
       return searchValues;
     default:
