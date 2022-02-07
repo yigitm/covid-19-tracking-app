@@ -1,4 +1,5 @@
 const GET_DATA = 'covid-19-tracking-app/countries/GET_DATA';
+const SEARCH_COUNTRY = 'covid-19-tracking-app/countries/SEARCH_COUNTRY';
 const baseURL = 'https://api.covid19tracking.narrativa.com/api?date_from=';
 
 const initialState = [];
@@ -19,10 +20,12 @@ export const dateHelper = () => {
     '12',
   ];
   const date = new Date();
-  const day = date.getDate() < 10 ? `0${date.getDate() - 1}` : `0${date.getDate() - 1}`;
-  const month = date.getMonth() < 10
-    ? `0${months[date.getMonth()]}`
-    : `0${months[date.getMonth()]}`;
+  const day =
+    date.getDate() < 10 ? `0${date.getDate() - 1}` : `0${date.getDate() - 1}`;
+  const month =
+    date.getMonth() < 10
+      ? `0${months[date.getMonth()]}`
+      : `0${months[date.getMonth()]}`;
   const year = date.getFullYear();
   const dataDate = [year.toString(), month, day.toString()].join('-');
   return dataDate;
@@ -30,6 +33,11 @@ export const dateHelper = () => {
 
 export const getData = (state) => ({
   type: GET_DATA,
+  payload: state,
+});
+
+export const searchData = (state) => ({
+  type: SEARCH_COUNTRY,
   payload: state,
 });
 
@@ -62,6 +70,12 @@ const countryReducers = (state = initialState, action) => {
   switch (action.type) {
     case GET_DATA:
       return action.payload;
+    case SEARCH_COUNTRY:
+      let input = action.payload.toString();
+      let searchValues = state.filter((s) => {
+        return s.name.toLowerCase().includes(input);
+      });
+      return searchValues;
     default:
       return state;
   }
