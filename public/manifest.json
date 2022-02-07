@@ -25,7 +25,7 @@
   "description": "Global Covid-19 Tracking App",
   "screenshots": [
     {
-      "src": "/images/app.png",
+      "src": "app.png",
       "type": "image/png",
       "sizes": "540x720"
     }
