@@ -109,8 +109,9 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Microverse
-- Open Source
+- [Microverse](https://www.microverse.org/)
+- [Narrativa API](https://covid19tracking.narrativa.com/index_en.html)
+- [Open Source](https://en.wikipedia.org/wiki/Open_source)
 
 ## 📝 License
 
