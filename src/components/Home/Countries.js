@@ -19,10 +19,14 @@ const Countries = () => {
           <p className="font-big">{country.name}</p>
         </Card.Title>
         <Card.Text className="text-end text-light font-small">
-          Total Cases: {country.total}
+          Total Cases:
+          {' '}
+          {country.total}
         </Card.Text>
         <Card.Text className="text-end text-light font-small">
-          New Cases: {country.newCase}
+          New Cases:
+          {' '}
+          {country.newCase}
         </Card.Text>
       </Card.Body>
     </Card>

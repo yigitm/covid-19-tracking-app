@@ -6,7 +6,7 @@ import { searchData, fetchData } from '../../redux/countries/countries';
 const Header = () => {
   const totalCase = useSelector((state) => state.headerReducers.total);
   const dispatch = useDispatch();
-
+  /* eslint-disable no-unused-expressions */
   const handleSearch = (eTarget) => {
     eTarget.toString() !== ''
       ? dispatch(searchData(eTarget))
@@ -22,7 +22,12 @@ const Header = () => {
         <p className="text-light mt-5">
           <span className="font-header text-left">GLOBAL</span>
           <br />
-          <span className="font-header"> {totalCase} cases</span>
+          <span className="font-header">
+            {' '}
+            {totalCase}
+            {' '}
+            cases
+          </span>
         </p>
       </Col>
       <Col className="col-12 d-flex justify-content-between align-items-center p-2 text-light bg-red-bold">
@@ -35,6 +40,7 @@ const Header = () => {
         />
       </Col>
     </Row>
+    /* eslint-disable no-unused-expressions */
   );
 };
 export default Header;

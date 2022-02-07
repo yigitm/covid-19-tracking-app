@@ -20,12 +20,10 @@ export const dateHelper = () => {
     '12',
   ];
   const date = new Date();
-  const day =
-    date.getDate() < 10 ? `0${date.getDate() - 1}` : `0${date.getDate() - 1}`;
-  const month =
-    date.getMonth() < 10
-      ? `0${months[date.getMonth()]}`
-      : `0${months[date.getMonth()]}`;
+  const day = date.getDate() < 10 ? `0${date.getDate() - 1}` : `0${date.getDate() - 1}`;
+  const month = date.getMonth() < 10
+    ? `0${months[date.getMonth()]}`
+    : `0${months[date.getMonth()]}`;
   const year = date.getFullYear();
   const dataDate = [year.toString(), month, day.toString()].join('-');
   return dataDate;
@@ -71,11 +69,7 @@ const countryReducers = (state = initialState, action) => {
     case GET_DATA:
       return action.payload;
     case SEARCH_COUNTRY:
-      let input = action.payload.toString();
-      let searchValues = state.filter((s) => {
-        return s.id.includes(input.toLowerCase());
-      });
-      return searchValues;
+      return state.filter((s) => s.id.includes(action.payload.toString().toLowerCase()));
     default:
       return state;
   }
