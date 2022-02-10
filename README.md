@@ -26,7 +26,7 @@ Original design is belongs to: [Nelson Sakwa on Behance](https://www.behance.net
 
 ## Live Demo
 
-[Demo Link](https://relaxed-elion-3dcb57.netlify.app/)
+[Demo Link](https://loving-lamarr-2cca8c.netlify.app/)
 
 ## Getting Started
 
