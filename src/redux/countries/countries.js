@@ -20,7 +20,7 @@ export const dateHelper = () => {
     '12',
   ];
   const date = new Date();
-  const day = date.getDate() < 10 ? `0${date.getDate() - 1}` : `0${date.getDate() - 1}`;
+  const day = date.getDate() < 10 ? `0${date.getDate() - 1}` : `${date.getDate() - 1}`;
 
   const month = date.getMonth() < 10
     ? `0${months[date.getMonth()]}`

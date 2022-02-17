@@ -26,7 +26,7 @@ Original design is belongs to: [Nelson Sakwa on Behance](https://www.behance.net
 
 ## Live Demo
 
-[Demo Link](https://relaxed-elion-3dcb57.netlify.app/)
+[Demo Link](https://loving-lamarr-2cca8c.netlify.app/)
 
 ## Getting Started
 
@@ -109,8 +109,9 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Microverse
-- Open Source
+- [Microverse](https://www.microverse.org/)
+- [Narrativa API](https://covid19tracking.narrativa.com/index_en.html)
+- [Open Source](https://en.wikipedia.org/wiki/Open_source)
 
 ## 📝 License
 
