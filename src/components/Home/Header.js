@@ -22,12 +22,7 @@ const Header = () => {
         <p className="text-light mt-5">
           <span className="font-header text-left">GLOBAL</span>
           <br />
-          <span className="font-header">
-            {' '}
-            {totalCase}
-            {' '}
-            cases
-          </span>
+          <span className="font-header"> {totalCase} cases</span>
         </p>
       </Col>
       <Col className="col-12 d-flex justify-content-between align-items-center p-2 text-light bg-red-bold">
