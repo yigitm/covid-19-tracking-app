@@ -20,11 +20,13 @@ export const dateHelper = () => {
     '12',
   ];
   const date = new Date();
-  const day = date.getDate() < 10 ? `0${date.getDate() - 1}` : `${date.getDate() - 1}`;
+  const day =
+    date.getDate() < 10 ? `0${date.getDate() - 1}` : `${date.getDate() - 1}`;
 
-  const month = date.getMonth() < 10
-    ? `0${months[date.getMonth()]}`
-    : `0${months[date.getMonth()]}`;
+  const month =
+    date.getMonth() < 10
+      ? `0${months[date.getMonth()]}`
+      : `0${months[date.getMonth()]}`;
   const year = date.getFullYear();
   const dataDate = [year.toString(), month, day.toString()].join('-');
   return dataDate;
@@ -53,8 +55,8 @@ export const fetchData = async (dispatch) => {
     const country = {
       name: item[0],
       id: item[1].id,
-      newCase: item[1].today_confirmed,
-      total: item[1].today_new_confirmed,
+      newCase: item[1].today_confirmed.toLocaleString(),
+      total: item[1].today_new_confirmed.toLocaleString(),
       regions: {
         region: item[1].regions,
       },
@@ -70,7 +72,9 @@ const countryReducers = (state = initialState, action) => {
     case GET_DATA:
       return action.payload;
     case SEARCH_COUNTRY:
-      return state.filter((s) => s.id.includes(action.payload.toString().toLowerCase()));
+      return state.filter((s) =>
+        s.id.includes(action.payload.toString().toLowerCase()),
+      );
     default:
       return state;
   }
