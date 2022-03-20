@@ -17,7 +17,7 @@ const Home = () => {
       <Loading />
       <Nav />
       <Header />
-      <Row>
+      <Row xs={2} md={3} lg={4}>
         <Countries />
       </Row>
     </Container>
