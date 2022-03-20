@@ -9,10 +9,14 @@ const Listregion = (region, index, id) => (
         <div>
           <p className="text-light font-region-list">{region.name}</p>
           <p className="text-light font-region-list-sm">
-            Total Cases: {region.today_confirmed.toLocaleString()}
+            Total Cases:
+            {' '}
+            {region.today_confirmed.toLocaleString()}
           </p>
           <p className="text-light font-region-list-sm">
-            New Cases: {region.today_new_confirmed.toLocaleString()}
+            New Cases:
+            {' '}
+            {region.today_new_confirmed.toLocaleString()}
           </p>
         </div>
       </div>
