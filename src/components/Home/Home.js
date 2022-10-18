@@ -5,6 +5,7 @@ import Loading from './Loading';
 import Nav from './Nav';
 import Header from './Header';
 import Countries from './Countries';
+import Message from './Message';
 import { fetchData } from '../../redux/countries/countries';
 
 const Home = () => {
@@ -18,6 +19,7 @@ const Home = () => {
       <Nav />
       <Header />
       <Row xs={2} md={3} lg={4}>
+        <Message />
         <Countries />
       </Row>
     </Container>
